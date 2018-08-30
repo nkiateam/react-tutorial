@@ -7,7 +7,7 @@ import { createStore } from 'redux';
 import Counter from './counter/components/Counter';
 import counter from './counter/reducers';
 
-// 스토어 생성
+// 스토어 생성 
 const store = createStore(counter);
 
 function render() {
@@ -26,7 +26,7 @@ import { Provider } from 'react-redux';
 import App from './todomvc/containers/App';
 import configureStore from './todomvc/store/configureStore';
 
-const todomvcStore = configureStore();
+const todomvcStore = configureStore(window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__());
 
 /*
     Provider는 react-redux 라이브러리에 내장되어있는, 리액트 앱에 store를 손쉽게 연동할 수 있도록 도와주는 컴포넌트 입니다.

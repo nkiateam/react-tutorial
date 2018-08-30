@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 
-// 하나씩 주석을 풀어보면서 실행결과를 확인해보세요
+// 하나씩 주석을 풀어보면서 실행결과를 확인해보세요. 
 
 /** 1. Class Component 
  *  React 에서 컴포넌트를 정의 할 때는 보통 EcmaScript 6 에 도입된 class 문법을 사용합니다.

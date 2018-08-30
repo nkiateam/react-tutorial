@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-class LifeCycle extends Component {// 리액트는 컴포넌트가 중요하기때문에..... 그렇게 설명
+class LifeCycle extends Component { 
 
     state = {
         number: 0

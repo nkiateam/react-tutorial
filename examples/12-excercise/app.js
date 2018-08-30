@@ -3,7 +3,6 @@ import ReactDOM from 'react-dom';
 import PropTypes from 'prop-types';
 
 class ContactsApp extends Component {
-    //엑서사이즈로 이름바꾸기 .................완료리뷰는 readme보여주고 코드위주로 ... 각챕터마다 구성해서... 사내에서 하루2~3시간 3회과정 으로 ....
 
     static propTypes = {
         contacts: PropTypes.arrayOf(PropTypes.object)
