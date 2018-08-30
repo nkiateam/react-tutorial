@@ -1,0 +1,42 @@
+{
+  "name": "react-tutorial",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "webpack-dev-server --open"
+  },
+  "author": "NKIA",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-loader": "^6.4.1",
+    "babel-plugin-transform-async-to-generator": "^6.24.1",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-polyfill": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-react": "^6.24.1",
+    "concurrently": "^2.0.0",
+    "del": "^2.2.1",
+    "keymirror": "^0.1.1",
+    "marked": "^0.3.6",
+    "object-assign": "^4.0.1",
+    "webpack": "^3.12.0",
+    "webpack-dev-server": "^2.11.2"
+  },
+  "dependencies": {
+    "classnames": "^2.2.6",
+    "cross-env": "^5.2.0",
+    "flux": "^2.1.1",
+    "prop-types": "^15.6.2",
+    "react": "^16.4.2",
+    "react-addons-update": "^15.6.2",
+    "react-dom": "^16.4.2",
+    "react-redux": "^4.4.6",
+    "react-router": "^2.8.1",
+    "react-router-dom": "^4.3.1",
+    "redux": "^3.6.0"
+  }
+}
