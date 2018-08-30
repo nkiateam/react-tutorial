@@ -2,6 +2,43 @@
 LifeCycle API
 =================================================================
 
+## **Intro**
+
+  <img src="./image/img1.png" height="300"/>  
+
+
+위 다이어그램은 React 컴포넌트의 출생(pre-mounting)과 사망 (unmounting)에서의 Life Cycle입니다. React의 장점은 복잡한 UI를 작은 크기로 나누는 것입니다. 따라서 앱을 각각의 컴포넌트 단위로 분류 할 수 있을 뿐만 아니라 각 컴포넌트에 대해 customize 할 수 있습니다.
+
+React Component의 라이프 사이클 메소드를 통해 UI의 각 컴포넌트가 렌더링(rendering), 업데이트(update), 재렌더링(re-rendering) 될 때를 고려할 수 있으며 완전히 사라질 때(unmount) 일어나는 일을 제어 할 수 있습니다.
+
+## Mounting
+React 컴포넌트의 인스턴스가 생성되고 DOM에 삽입되는 과정의 life cycle 입니다.
+
+### 1.constructor
+### 2.componentWillMount
+### 3.render
+### 4.componentDidMount
+
+## Updating
+prop 또는 state의 변경으로 해당 컴포넌트가 re-render 되는 경우의 life cycle 입니다.
+
+## Props Change
+### 1.componentWillReceiveProps
+### 2.shouldComponentUpdate
+### 3.componentWillUpdate
+### 4.render
+### 5.componentDidUpdate
+
+## State Change
+### 1.shouldComponentUpdate
+### 2.componentWillUpdate
+### 3.render
+### 4.componentDidUpdate
+
+## Unmounting
+### 1.componentWillUnmount
+
+이제 각각에 대해서 살펴봅시다.
 
 ## **constructor()**
 
