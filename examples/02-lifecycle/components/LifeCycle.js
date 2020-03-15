@@ -1,20 +1,26 @@
 import React, { Component } from 'react';
 
+/**
+ * React Docs
+ * https://reactjs.org/docs/react-component.html
+ */
 class LifeCycle extends Component { 
-
-    state = {
-        number: 0
-    }
-    
     constructor(props) {
         //생성자 함수 : 컴포넌트가 새로 만들어질 때마다 이 함수가 호출됩니다.
         console.log('1. 생성자호출');
         super(props);
+
+        this.state = {
+            number: 0,
+            isUpdate: false,
+        }
     }
 
     static getDerivedStateFromProps(nextProps, prevState) {
         // 이 API 는 props 로 받아온 값을 state 로 동기화 하는 작업을 해줘야 하는 경우에 사용됩니다.
-        console.log('2. getDerivedStateFromProps');
+        const { isUpdate } = prevState;
+        const order = isUpdate === true ? 1 : 2;
+        console.log(`${order}. getDerivedStateFromProps`);
         return null;
     }
 
@@ -30,23 +36,23 @@ class LifeCycle extends Component {
         // 성능 최적화를 합니다. 쓸데없는 update가 일어나면 여기서 걸러냅니다.
         // 5 의 배수라면 리렌더링 하지 않습니다.
         if (nextState.number % 5 === 0) {
-            console.log('shouldComponentUpdate 5의배수')
+            console.log('2. shouldComponentUpdate 5의배수')
             return false;
         }
-        console.log('5.shouldComponentUpdate')
+        console.log('2. shouldComponentUpdate')
         return true;
     }
 
     getSnapshotBeforeUpdate(prevProps, prevState) {
         // DOM 업데이트가 일어나기 직전의 시점입니다.
-        // 여기서 리턴 하는 값은 componentDidMount 에서 3번째 파라미터 snapshot 값으로 받아올 수 있습니다.
-        console.log('6. getSnapshotBeforeUpdate');
+        // 여기서 리턴 하는 값은 componentDidUpdate 에서 3번째 파라미터 snapshot 값으로 받아올 수 있습니다.
+        console.log('4. getSnapshotBeforeUpdate');
         return null;
       }
 
     componentDidUpdate(prevProps, prevState, snapshot) {
-        // 이 API는 컴포넌트에서 render() 를 호출하고난 다음에 발생하게 됩니다.
-        console.log('7. componentDidUpdate');
+        // 이 함수 안에서 setState 사용시 무한루프에 빠지므로 주의.
+        console.log('5. componentDidUpdate');
     }
 
     componentWillUnmount() {
@@ -74,14 +80,16 @@ class LifeCycle extends Component {
     handleIncrease = () => {
         const { number } = this.state;
         this.setState({
-            number: number + 1
+            number: number + 1,
+            isUpdate: true,
         });
     }
 
     handleDecrease = () => {
         this.setState(
             ({ number }) => ({
-                number: number - 1
+                number: number - 1,
+                isUpdate: true,
             })
         );
     }

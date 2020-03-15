@@ -15,10 +15,14 @@ class State extends Component {
 		disabled: false
 	};
 
-	state = {
-		index: 0
-	}
+	constructor(props) {
+        super(props);
 
+        this.state = {
+			index: 0
+		}
+	}
+	
 	onClick = () => {
 		let index = this.state.index;
 		if (index < 10) {

@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 class Props extends Component {
 	static propTypes = {
-	 name: PropTypes.string.isRequired,
+	 	name: PropTypes.string.isRequired,
 		index: PropTypes.number,
 		disabled: PropTypes.bool
 	};
