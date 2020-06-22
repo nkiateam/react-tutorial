@@ -11,10 +11,10 @@ class BasicContainer extends React.Component {
 
     render() {
         return (
-            <section>
-                <h2>Class Component</h2>
+            <div>
+                <h2>클래스 컴포넌트</h2>
                 <b>Hello { this.props.name }</b>
-            </section>
+            </div>
         );
     }
 }
@@ -27,10 +27,10 @@ class BasicContainer extends React.Component {
 */
 // function BasicContainer(props) {
 //     return (
-//         <section>
-//             <h2>Functional Component</h2>
+//         <div>
+//             <h2>함수형 컴포넌트</h2>
 //             <b>Hello { props.name }</b>
-//         </section>
+//         </div>
 //     );
 // }
 
@@ -40,24 +40,12 @@ class BasicContainer extends React.Component {
 /** 3. Functional Component : arrow function(화살표 함수) 사용 */
 // const BasicContainer = (props) => {
 //     return (
-//         <section>
-//             <h2>Functional Component use arrow function</h2>
+//         <div>
+//             <h2>화살표 함수를 사용한 함수형 컴포넌트</h2>
 //             <b>Hello { props.name }</b>
-//         </section>
+//         </div>
 //     );
 // }
 
-
-
-
-/** 4. 비구조화 할당(Object Destructuring) 문법 사용 */
-// const BasicContainer = ({name}) => {
-//     return (
-//         <section>
-//             <h2>Functional Component use Object Destructuring</h2>
-//             <b>Hello { name }</b>
-//         </section>
-//     );
-// }
 
 ReactDOM.render(<BasicContainer name="react"/>, document.getElementById('app'));

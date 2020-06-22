@@ -2,10 +2,7 @@ import React, { Component } from 'react';
 
 const Promblematic = () => {
     throw (new Error('버그 발생...!'));  // Error가 발생하면 자동으로 componentDidCatch 로 이동
-    return (
-      <div/>
-    );
-  };
+};
 
 class Error extends Component {
 
@@ -35,16 +32,30 @@ class Error extends Component {
         );
     }
 
+    handleReset = () => {
+        this.setState({
+            number: 0,
+            error: false,
+        });
+    }
+
     render() {
-        if(this.state.error) return (<h1>에러 발생...!</h1>);
+        const { error, number } = this.state;
+        if (error) return (
+            <React.Fragment>
+                <h1>에러 발생...!</h1>
+                <button onClick={this.handleReset}>Reset</button>
+            </React.Fragment>
+        )
+
         return (
             <div>
-                <div>값: {this.state.number}</div>
-                { this.state.number === 4 && <Promblematic /> }
+                <div>값: {number}</div>
+                { number === 4 && <Promblematic /> }
                 <button onClick={this.handleIncrease}>+</button>
                 <button onClick={this.handleDecrease}>-</button>
             </div>
-        );
+        )
     }
 }
 
