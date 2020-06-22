@@ -1,13 +1,13 @@
 import React, {Component} from 'react';
 import ReactDOM from 'react-dom';
 
-import LifeCycle from './components/LifeCycle';
+import App from './src/App';
 
 class Main extends Component {
 
     render() {
         return (
-            	<LifeCycle/>
+            <App />
         )
     }
 }
