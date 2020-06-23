@@ -1,16 +1,13 @@
 import React, {Component} from 'react';
 import ReactDOM from 'react-dom';
 
-import State from './components/State';
+import App from './src/App';
 
 class Main extends Component {
 
     render() {
         return (
-            <div>         	
-            	<h2>State</h2><br/>
-            	<State />
-            </div>
+            <App/>>
         );
     }
 }
