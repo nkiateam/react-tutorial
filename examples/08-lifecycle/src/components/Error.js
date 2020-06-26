@@ -76,20 +76,13 @@ class Error extends React.Component {
         });
     }
 
-    handleReset = () => {
-        this.setState({
-            number: 0,
-            error: false,
-        });
-    }
-
     render() {
-        console.log('3. render');
+        
         const { error, number } = this.state;
+        console.log('3. render');
         if (error) return (
             <React.Fragment>
                 <h1>에러 발생...!</h1>
-                <button onClick={this.handleReset}>Reset</button>
             </React.Fragment>
         )
 

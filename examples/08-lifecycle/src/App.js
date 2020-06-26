@@ -5,7 +5,8 @@ class App extends React.Component {
   render() {
     return (
       <div>
-        <h1>숫자가 4 이상이면 에러발생</h1>
+        <h1>숫자가 4면 에러발생</h1>
+        <h1>숫자가 3이면 렌더 안함</h1>
         <Error/>
       </div>
     )
